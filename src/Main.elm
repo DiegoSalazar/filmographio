@@ -113,7 +113,7 @@ routeParser =
         ]
 
 
--- view : Model -> Browser.Document Msg
+view : Model -> Browser.Document Msg
 view model =
     { title = "Filmographio"
     , body =
@@ -124,7 +124,7 @@ view model =
     }
 
 
--- navigation : Model -> Html (Cmd msg)
+navigation : Model -> Html Msg
 navigation model =
     Navbar.config NavMsg
         |> Navbar.dark

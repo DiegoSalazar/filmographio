@@ -42,6 +42,7 @@ pageSearch =
         , searchFooter
         ]
 
+searchForm : Html msg
 searchForm =
     Grid.row []
         [ Grid.col []
@@ -60,6 +61,7 @@ searchForm =
             ]
         ]
 
+searchToolBar : Html msg
 searchToolBar =
     Grid.row []
         [ Grid.col []
@@ -67,15 +69,18 @@ searchToolBar =
             ]
         ]
 
+resultsList : List ResultItem.Model -> Html msg
 resultsList results =
     Grid.row []
         [ Grid.col [] <| resultsListContent results
         ]
 
+resultsListContent : List ResultItem.Model -> List(Html msg)
 resultsListContent results =
     [ ListGroup.custom <| List.map ResultItem.view results
     ]
 
+searchFooter : Html msg
 searchFooter =
     Grid.row []
         [ Grid.col []

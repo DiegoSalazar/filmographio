@@ -1,4 +1,4 @@
-module ResultItem exposing (view)
+module ResultItem exposing (Model, view)
 
 import Html exposing (Html, text, h5, div, p, small)
 import Html.Attributes exposing (href)
